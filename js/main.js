@@ -1,13 +1,13 @@
-// Valores de los medidores
+// Valor de los medidores
 const values = {
-  'fill-1': 2.69,   // PPO2
-  'fill-2': 2.41,   // CABIN TEMP
-  'fill-3': 14.00,  // CABIN PRESSURE
-  'fill-4': 0.07,   // CO2
-  'fill-5': 26.53,  // LOOP A
-  'fill-6': 20.00,  // LOOP B
-  'fill-7': 0.00,   // NET PWR 1
-  'fill-8': 0.00    // NET PWR 2
+  'fill-1': 2.69,   
+  'fill-2': 2.41,   
+  'fill-3': 14.00,  
+  'fill-4': 0.07,   
+  'fill-5': 26.53,  
+  'fill-6': 20.00,  
+  'fill-7': 0.00,   
+  'fill-8': 0.00    
 };
 
 function setManometro(id, value, maxValue) {
@@ -28,4 +28,4 @@ function updateManometro() {
   setManometro('fill-8', values['fill-8'], 100); // NET PWR 2
 }
 
-updateManometro(); // Ejecutar al cargar
+updateManometro(); 
