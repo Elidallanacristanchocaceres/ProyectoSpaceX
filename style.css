@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #131a22;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+
+    
+
+}
+.container{
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0, 1);
+}
+h1 {
+    color: white;
+    font-size: 50px;
+
+    
+}
+p {
+    color: white;
+    font-size: 22px;
+    line-height: 1.8;
+    text-align: center;
+}
+.text1 {
+    color: white;
+    font-size: 40px;
+}
+img {
+    width: 25vw;
+    height: 60vh;
+    margin-left: 60vw;
+}
