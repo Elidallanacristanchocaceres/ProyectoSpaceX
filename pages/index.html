@@ -4,10 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="modules" src="/js/main.js" defer></script>
+    <script type="module" src="/js/main.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="principal">
+        <div class="linea1">
+            <img src="/assets/Check Icon.png" alt="">
+            <p>ALL SYSTEMS CHECK <br>
+            Normal</p>
+        </div>
+
+        <div class="linea1">
+            <img src="/assets/Check Icon.png" alt="">
+            <p>RENDEZVOUS BURN SLOW <br>
+            Normal</p>
+        </div>
+
+        <div class="linea1">
+            <img src="/assets/Check Icon.png" alt="">
+            <p>PREPARE RENDEZVOUS BURN <br>
+            Normal</p>
+        </div>
+
+        <div class="linea1">
+            <img src="/assets/Check Icon (2).png" alt="">
+            <p>THERMAL SHIELD <br>
+            Applied</p>
+        </div>
+
+        <div class="linea1">
+            <img src="/assets/Check Icon.png" alt="">
+            <p>BURN GO/NO-GO <br>
+            Normal</p>
+        </div>
+
+        <div class="linea1">
+            <img src="/assets/Check Icon (4).png" alt="">
+            <p>POWER COMPLETION <br>
+            Awaiting</p>
+        </div>
+
+        <div class="linea1">
+            <img src="/assets/Check Icon.png" alt="">
+            <p>STATION DECK CHECK <br>
+            Normal</p>
+        </div>
+        <div class="boton">
+            <button>SYSTEM</button> <button>CABIN</button>
+        </div>
+    </div>
+
+    <div class="ppo2">
+        <!-- Medidor PPO2 -->
+        <div class="manometro">
+          <svg class="manometro-svg" viewBox="0 0 100 100">
+            <g class="manometro-ticks">
+              <line x1="50" y1="10" x2="50" y2="15"></line>
+              <!-- Añadir más líneas -->
+            </g>
+            <circle cx="50" cy="50" r="40" class="manometro-fill" id="fill-1"></circle>
+          </svg>
+          <div class="manometro-cover">
+            <div class="manometro-label">
+              <p>PPO2</p>
+              <h2 id="value-1">2.69</h2>
+              <span>psia</span>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Medidor CABIN TEMP -->
+        <div class="manometro">
+          <svg class="manometro-svg" viewBox="0 0 100 100">
+            <g class="manometro-ticks">
+              <line x1="50" y1="10" x2="50" y2="15"></line>
+              <!-- Añadir más líneas -->
+            </g>
+            <circle cx="50" cy="50" r="40" class="manometro-fill" id="fill-2"></circle>
+          </svg>
+          <div class="manometro-cover">
+            <div class="manometro-label">
+              <p>CABIN TEMP</p>
+              <h2 id="value-2">2.41</h2>
+              <span>°C</span>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Medidor CABIN PRESSURE -->
+        <div class="manometro">
+          <svg class="manometro-svg" viewBox="0 0 100 100">
+            <g class="manometro-ticks">
+              <line x1="50" y1="10" x2="50" y2="15"></line>
+              <!-- Añadir más líneas -->
+            </g>
+            <circle cx="50" cy="50" r="40" class="manometro-fill" id="fill-3"></circle>
+          </svg>
+          <div class="manometro-cover">
+            <div class="manometro-label">
+              <p>CABIN PRESSURE</p>
+              <h2 id="value-3">14.00</h2>
+              <span>psia</span>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Medidor CO2 -->
+        <div class="manometro">
+          <svg class="manometro-svg" viewBox="0 0 100 100">
+            <g class="manometro-ticks">
+              <line x1="50" y1="10" x2="50" y2="15"></line>
+              <!-- Añadir más líneas -->
+            </g>
+            <circle cx="50" cy="50" r="40" class="manometro-fill" id="fill-4"></circle>
+          </svg>
+          <div class="manometro-cover">
+            <div class="manometro-label">
+              <p>CO2</p>
+              <h2 id="value-4">0.07</h2>
+              <span>mmHg</span>
+            </div>
+          </div>
+        </div> 
+      
+        <!-- Medidor LOOP A -->
+        <div class="manometro">
+          <svg class="manometro-svg" viewBox="0 0 100 100">
+            <g class="manometro-ticks">
+              <line x1="50" y1="10" x2="50" y2="15"></line>
+              <!-- Añadir más líneas -->
+            </g>
+            <circle cx="50" cy="50" r="40" class="manometro-fill" id="fill-5"></circle>
+          </svg>
+          <div class="manometro-cover">
+            <div class="manometro-label">
+              <p>LOOP A</p>
+              <h2 id="value-5">26.53</h2>
+              <span>°C</span>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Medidor LOOP B -->
+        <div class="manometro">
+          <svg class="manometro-svg" viewBox="0 0 100 100">
+            <g class="manometro-ticks">
+              <line x1="50" y1="10" x2="50" y2="15"></line>
+              <!-- Añadir más líneas -->
+            </g>
+            <circle cx="50" cy="50" r="40" class="manometro-fill" id="fill-6"></circle>
+          </svg>
+          <div class="manometro-cover">
+            <div class="manometro-label">
+              <p>LOOP B</p>
+              <h2 id="value-6">20.00</h2>
+              <span>°C</span>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Medidor NET PWR 1 -->
+        <div class="manometro">
+          <svg class="manometro-svg" viewBox="0 0 100 100">
+            <g class="manometro-ticks">
+              <line x1="50" y1="10" x2="50" y2="15"></line>
+              <!-- Añadir más líneas -->
+            </g>
+            <circle cx="50" cy="50" r="40" class="manometro-fill" id="fill-7"></circle>
+          </svg>
+          <div class="manometro-cover">
+            <div class="manometro-label">
+              <p>NET PWR 1</p>
+              <h2 id="value-7">0.00</h2>
+              <span>W</span>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Medidor NET PWR 2 -->
+        <div class="manometro">
+          <svg class="manometro-svg" viewBox="0 0 100 100">
+            <g class="manometro-ticks">
+              <line x1="50" y1="10" x2="50" y2="15"></line>
+              <!-- Añadir más líneas -->
+            </g>
+            <circle cx="50" cy="50" r="40" class="manometro-fill" id="fill-8"></circle>
+          </svg>
+          <div class="manometro-cover">
+            <div class="manometro-label">
+              <p>NET PWR 2</p>
+              <h2 id="value-8">0.00</h2>
+              <span>W</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
 </body>
 </html>

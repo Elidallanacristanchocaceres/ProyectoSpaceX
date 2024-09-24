@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    height: 100vh;
+    background-color: #131A22;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+}
+.principal, .linea1 {
+    display: flex;
+    margin: 6px;
+}
+
+.linea1 img{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    margin: 12px;
+}
+.linea1 p{
+    font-size: 0.8rem;
+    color: white;
+}
+.principal, .boton{
+    margin: 20px;
+}
+
+.ppo2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10; /
+}
+
+
+.manometro {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+
+.manometro-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(270deg);
+}
+
+.manometro-ticks line {
+  stroke: #FFFFFF;
+  stroke-width: 0.5;
+}
+
+.manometro-fill {
+  fill: none;
+  stroke-width: 5;
+  stroke-dasharray: 251;
+  stroke-dashoffset: 251;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+#fill-1 {
+  stroke: #FFD700; /* Oro para PPO2 */
+}
+
+#fill-2 {
+  stroke: #FF4500; /* Naranja para CABIN TEMP */
+}
+
+#fill-3 {
+  stroke: #FFDD00; /* Amarillo para CABIN PRESSURE */
+}
+
+#fill-4 {
+  stroke: #2D8EFF; /* Azul para CO2 */
+}
+
+#fill-5 {
+  stroke: #2D8EFF; /* Azul para LOOP A */
+}
+
+#fill-6 {
+  stroke: #2D8EFF; /* Azul para LOOP B */
+}
+
+#fill-7 {
+  stroke: #2D8EFF; /* Azul para NET PWR 1 */
+}
+
+#fill-8 {
+  stroke: #2D8EFF; /* Azul para NET PWR 2 */
+}
+
+.manometro-cover {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #131A22;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.manometro-label {
+  text-align: center;
+}
+
+.manometro-label p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.manometro-label h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.manometro-label span {
+  font-size: 12px;
+}
