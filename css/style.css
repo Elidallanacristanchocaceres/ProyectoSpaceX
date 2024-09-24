@@ -5,6 +5,11 @@ body{
     height: 100vh;
     background-color: #131A22;
 }
+h1{
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
 
 .principal{
     display: flex;
@@ -25,14 +30,41 @@ body{
     font-size: 0.8rem;
     color: white;
 }
-.principal, .boton{
-    margin: 20px;
+.boton1{
+    margin-top: 240px;
+    margin-left: 30px;
+    height: 60px;
+    width: 100px;
+}
+.boton2{
+  margin-top: 240px;
+  height: 40px;
+  background-color: #131A22;
+  border: 1px solid white;
+  color: white;
+  width: 80px;
 }
 
 .ppo2 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10; /
+  gap: 10px; 
+  margin-left: 480px;
+  margin-top: -700px;
+  
+}
+.primero{
+  display: flex;
+  gap: 100px;
+}
+.segundo{
+  display: flex;
+  gap: 140px;
+  margin-left: -60px;
+}
+
+.cohete img{
+  width: 480px;
+  margin-left: 720px;
+  margin-top: -220px;
 }
 
 
@@ -40,8 +72,6 @@ body{
   position: relative;
   width: 150px;
   height: 150px;
-  margin: 0;
-  padding: 0; 
   box-sizing: border-box; 
 }
 
@@ -65,37 +95,19 @@ body{
   transition: stroke-dashoffset 0.5s ease;
 }
 
-#fill-1 {
-  stroke: #FFD700; /* Oro para PPO2 */
+#fill-1, #fill-3 {
+  stroke: #FFD700; 
 }
 
 #fill-2 {
-  stroke: #FF4500; /* Naranja para CABIN TEMP */
+  stroke: #FF4500; 
 }
 
-#fill-3 {
-  stroke: #FFDD00; /* Amarillo para CABIN PRESSURE */
+
+#fill-4, #fill-5, #fill-6, #fill-7, #fill-8 {
+  stroke: #2D8EFF; 
 }
 
-#fill-4 {
-  stroke: #2D8EFF; /* Azul para CO2 */
-}
-
-#fill-5 {
-  stroke: #2D8EFF; /* Azul para LOOP A */
-}
-
-#fill-6 {
-  stroke: #2D8EFF; /* Azul para LOOP B */
-}
-
-#fill-7 {
-  stroke: #2D8EFF; /* Azul para NET PWR 1 */
-}
-
-#fill-8 {
-  stroke: #2D8EFF; /* Azul para NET PWR 2 */
-}
 
 .manometro-cover {
   position: absolute;
@@ -110,6 +122,8 @@ body{
   justify-content: center;
   align-items: center;
   color: white;
+  
+  
 }
 
 .manometro-label {
@@ -128,4 +142,14 @@ body{
 
 .manometro-label span {
   font-size: 12px;
+}
+
+.connection{
+  color: white;
+  margin-left: 580px;
+}
+
+hr{
+  width: 180px;
+  margin: 0;
 }
