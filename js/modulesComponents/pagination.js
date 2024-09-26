@@ -139,21 +139,25 @@ const getRocketsId = async(e)=>{
     await progressSecondStageHeightRocket(Rocket)
 }
 export const paginationRockets = async()=>{
+    //ESTA VARIABLE ESTA BUSCANDO LOS DATOS QUE VIENEN DEL API 
+    //CON getAllRockets()
+    //ENTRA CON CTRL + CLICK A getAllRockets para mirar que se esta buscando
     let rockets = await getAllRockets();
     let div = document.createElement("div");
-    div.classList.add("buttom__paginacion")
-  
+    div.classList.add("buttom__paginacion");
     rockets.forEach((val,id) => {
         let a = document.createElement("a");
         a.setAttribute("href","#");
         a.id = val.id;
         a.textContent = id+1;
         a.addEventListener("click", getRocketsId)
+        //LA FUNCION getRocketsId esta trayendo el id de cada Rocket y muestra la informacion de ese rocket
+        //Puedes mirar que esta buscando dandolo CTRL + CLICK
         div.appendChild(a);
     });
     
     let [a1,a2,a3,a4] = div.children
-    a3.click();
+    a1.click();
     // <div class="buttom__paginacion">
     //     <a href="#">&laquo;</a> 
     //     <a href="#" class="activo">1</a>
