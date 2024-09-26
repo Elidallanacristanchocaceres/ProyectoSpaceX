@@ -23,6 +23,10 @@ rocket.addEventListener("click", async(e)=>{
     let paginacion = document.querySelector("#paginacion");
     paginacion.innerHTML = ""
     paginacion.append(await paginationRockets())
+    //CUANDO LE DAMOS CLICK AL BOTON DE ROCKETS ROJO QUE ESTA EN EL FOOTER
+    //PUEDES ENTRAR CON CTRL + CLICK A PAGINATION ROCKET PARA MIRAR LO QUE SE ESTA MOSTRANDO EN LA 
+    //PAGINACION
+
 } )
 
 let capsules = document.querySelector("#capsules")
@@ -34,4 +38,4 @@ capsules.addEventListener("click", async(e)=>{
 })
 
 
-capsules.click();
+rocket.click();
