@@ -1,8 +1,14 @@
+
 import { 
-    load,
-    paginationCapsules,
+    load 
+} from "./modulesComponents/variablesGlobales.js";
+import { 
     paginationRockets
-} from "./modulesComponents/pagination.js";
+ } from "./modulesComponents/Cohetes/paginaRockets.js";
+
+ import { 
+    paginationCapsules
+ } from "./modulesComponents/Capsulas/paginaCapsules.js";
 
 let footerSelect = async(e, id)=>{
     e.preventDefault();

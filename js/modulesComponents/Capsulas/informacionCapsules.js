@@ -1,4 +1,5 @@
-export const informationRockets = async(country, description)=>{
+/*INFORMACION DE LA IZQUIERDA*/
+export const informationCapsules = async(last_update)=>{
     let div = document.createElement('div');
     div.classList.add('description__container')
     let divFirst = document.createElement('div');
@@ -8,9 +9,9 @@ export const informationRockets = async(country, description)=>{
     
     let divLast = document.createElement('div');
     let h3 = document.createElement('h3');
-    h3.textContent = country
+    h3.textContent = "Ultima Actualizacion"
     let small = document.createElement('small');
-    small.textContent = description
+    small.textContent = last_update
     divLast.append(h3, small);
     div.append(divFirst, divLast);
 
@@ -27,7 +28,7 @@ export const informationRockets = async(country, description)=>{
     //     </div>
     // </div>
 }
-export const informationLaunchCostRocket = async(cost_per_launch)=>{
+export const informationCapsulesLandLandings = async(land_landings)=>{
     let div = document.createElement('div');
     div.classList.add('description__container')
     let divFirst = document.createElement('div');
@@ -37,10 +38,9 @@ export const informationLaunchCostRocket = async(cost_per_launch)=>{
     
     let divLast = document.createElement('div');
     let h3 = document.createElement('h3');
-    h3.textContent = "The estimated cost per rocket launch"
+    h3.textContent = "Aterrizaje en tierra"
     let small = document.createElement('small');
-    let money = new Intl.NumberFormat('cop').format(cost_per_launch)
-    small.textContent = `$ ${money}`
+    small.textContent = land_landings
     divLast.append(h3, small);
     div.append(divFirst, divLast);
 
@@ -57,7 +57,7 @@ export const informationLaunchCostRocket = async(cost_per_launch)=>{
     //     </div>
     // </div>
 }
-export const informationFirstFlightRocket = async(first_flight)=>{
+export const informationCapsulesReuse_count = async(reuse_count)=>{
     let div = document.createElement('div');
     div.classList.add('description__container')
     let divFirst = document.createElement('div');
@@ -67,9 +67,9 @@ export const informationFirstFlightRocket = async(first_flight)=>{
     
     let divLast = document.createElement('div');
     let h3 = document.createElement('h3');
-    h3.textContent = "The date of the first flight of the rocket"
+    h3.textContent = "recuento de reutilización"
     let small = document.createElement('small');
-    small.textContent = first_flight
+    small.textContent = reuse_count
     divLast.append(h3, small);
     div.append(divFirst, divLast);
 
