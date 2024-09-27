@@ -79,3 +79,4 @@ export const nameCapsules = async(name) => {
     header__title.innerHTML = "";
     header__title.textContent = name
 }
+

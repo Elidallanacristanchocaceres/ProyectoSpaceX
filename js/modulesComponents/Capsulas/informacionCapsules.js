@@ -86,7 +86,7 @@ export const informationCapsulesReuse_count = async(reuse_count)=>{
     //     </div>
     // </div>
 }
-export const informationWebRocket = async(wikipedia)=>{
+export const informationCapsulesLaunches = async(launches)=>{
     let div = document.createElement('div');
     div.classList.add('description__container')
     let divFirst = document.createElement('div');
@@ -96,11 +96,11 @@ export const informationWebRocket = async(wikipedia)=>{
     
     let divLast = document.createElement('div');
     let h3 = document.createElement('h3');
-    h3.textContent = "Read more about the coete"
+    h3.textContent = "Lanzamientos"
     let a = document.createElement('a');
-    a.setAttribute("href", wikipedia)
+    a.setAttribute("href", launches )
     a.setAttribute("target", "_blank")
-    a.textContent = "Wikipedia"
+    a.textContent = "launches"
     divLast.append(h3, a);
     div.append(divFirst, divLast);
     let description__item = document.querySelector("#description__item")

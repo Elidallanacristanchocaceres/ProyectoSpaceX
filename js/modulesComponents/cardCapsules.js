@@ -1,4 +1,4 @@
-export const imageRockets = async(flickr_images)=>{
+export const imageCapsules = async(flickr_images)=>{
     let section__image = document.querySelector("#section__image")
     let divs = [];
     flickr_images.forEach(val => {
@@ -15,5 +15,3 @@ export const imageRockets = async(flickr_images)=>{
     //     <img src="https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg" referrerpolicy="no-referrer">
     // </div>
 }
-
-

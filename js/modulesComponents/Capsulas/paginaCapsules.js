@@ -8,8 +8,20 @@ import {
 import { 
     informationCapsules,
     informationCapsulesLandLandings,
-    informationCapsulesReuse_count
+    informationCapsulesReuse_count,
+    informationCapsulesLaunches
  } from "./informacionCapsules.js";
+
+ 
+
+ import { 
+    tableCapsulesColum1, 
+    tableCapsulesColum2
+} from "./tablasCapsules.js";
+
+import { 
+    imageCapsules 
+} from "./cardCapsules.js";
 
 import { clear } from "../variablesGlobales.js";
 
@@ -24,28 +36,28 @@ const getCapsulesId = async(e)=>{
     }
     e.target.classList.add('activo');
     
-    let capsules = await getAllCapsulesId(e.target.id);
+    let Capsules = await getAllCapsulesId(e.target.id);
     await clear();
     
-    await informationCapsules(capsules.last_update)
-    await nameCapsules(capsules.name)
-    await informationCapsulesLandLandings(capsules.land_landings)
-    await informationCapsulesReuse_count(capsules.reuse_count)
-    await informationWebRocket(Rocket.wikipedia)
+    await informationCapsules(Capsules.last_update)
+    await nameCapsules(Capsules.name)
+    await informationCapsulesLandLandings(Capsules.land_landings)
+    await informationCapsulesReuse_count(Capsules.reuse_count)
+    await informationCapsulesLaunches(Capsules.launches);
 
-    await informRocketEngineThrustSeaLevel(Rocket.engines.thrust_sea_level);
-    await informRocketEngineThrustVacuum(Rocket.engines.thrust_vacuum);
-    await imageRockets(Rocket.flickr_images);
+    //await informCapsulesEngineThrustSeaLevel(Capsules.engines.thrust_sea_level);
+    //await informCapsulesEngineThrustVacuum(Capsules.engines.thrust_vacuum);
+    //await imageCapsules(Capsules.flickr_images);
 
-    await tableRocketColum1(Rocket)
-    await tableRocketColum2(Rocket)
+    await tableCapsulesColum1(Capsules)
+    await tableCapsulesColum2(Capsules)
 
-    await progressRocketWeight(Rocket)
-    await progressPayloadWeights(Rocket)
-    await progressHeightRocket(Rocket)
-    await progressDiameterRocket(Rocket)
-    await progressSecondStageDiameterRocket(Rocket)
-    await progressSecondStageHeightRocket(Rocket)
+    //await progressRocketWeight(Rocket)
+    //await progressPayloadWeights(Rocket)
+    //await progressHeightRocket(Rocket)
+    //await progressDiameterRocket(Rocket)
+    //await progressSecondStageDiameterRocket(Rocket)
+    //await progressSecondStageHeightRocket(Rocket)
 }
 export const paginationCapsules = async()=>{
     //ESTA VARIABLE ESTA BUSCANDO LOS DATOS QUE VIENEN DEL API 
