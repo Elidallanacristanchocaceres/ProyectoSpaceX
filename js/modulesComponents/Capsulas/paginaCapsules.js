@@ -19,9 +19,9 @@ import {
     tableCapsulesColum2
 } from "./tablasCapsules.js";
 
-import { 
-    imageCapsules 
-} from "./cardCapsules.js";
+//import { 
+  //  imageCapsules 
+//} from "./cardCapsules.js";
 
 import { clear } from "../variablesGlobales.js";
 
@@ -45,8 +45,8 @@ const getCapsulesId = async(e)=>{
     await informationCapsulesReuse_count(Capsules.reuse_count)
     await informationCapsulesLaunches(Capsules.launches);
 
-    //await informCapsulesEngineThrustSeaLevel(Capsules.engines.thrust_sea_level);
-    //await informCapsulesEngineThrustVacuum(Capsules.engines.thrust_vacuum);
+    //await informCapsulesEngineThrustSeaLevel(capsules.engines.thrust_sea_level);
+    //await informCapsulesEngineThrustVacuum(capsules.engines.thrust_vacuum);
     //await imageCapsules(Capsules.flickr_images);
 
     await tableCapsulesColum1(Capsules)
