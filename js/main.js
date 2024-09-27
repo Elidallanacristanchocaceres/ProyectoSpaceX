@@ -1,8 +1,12 @@
+
 import { 
-    load,
-    paginationCapsules,
+    load 
+} from "./modulesComponents/variablesGlobales.js";
+import {
     paginationRockets
-} from "./modulesComponents/pagination.js";
+}from "./modulesComponents/pagination.js"
+
+
 
 let footerSelect = async(e, id)=>{
     e.preventDefault();
@@ -36,6 +40,15 @@ capsules.addEventListener("click", async(e)=>{
     paginacion.innerHTML = ""
     paginacion.append(await paginationCapsules())
 })
+
+let Company = document.querySelector("#company")
+Company.addEventListener("click", async(e)=>{
+    await footerSelect(e, Company)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationCompany())
+})
+
 
 
 rocket.click();
