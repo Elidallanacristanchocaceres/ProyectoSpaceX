@@ -1,10 +1,10 @@
 import { 
     getAllRockets, 
     getAllRocketsId
-} from "../modules/rockets.js";
+} from "../../modules/rockets.js";
 import { 
     nameRockets 
-} from "./title.js";
+} from "../title.js";
 import { 
     informationRockets,
     informationLaunchCostRocket,
@@ -29,11 +29,11 @@ import {
     progressDiameterRocket,
     progressSecondStageDiameterRocket,
     progressSecondStageHeightRocket,
-} from "../modulesComponents/progressBar.js";
+} from "../progressBar.js";
 ///
 import { 
     getAllCapsules 
-} from "../modules/capsules.js";
+} from "../../modules/capsules.js";
 
 
 export const load = async()=>{

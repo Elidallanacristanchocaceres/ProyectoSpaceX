@@ -74,7 +74,7 @@ export const nameRockets = async(name)=>{
     header__title.textContent = name;
 }
 
-export const nameCapsules = async(name) => {
+export const nameCompany = async(name) => {
     let header__title = document.querySelector("#header__title");
     header__title.innerHTML = "";
     header__title.textContent = name

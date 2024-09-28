@@ -1,7 +1,7 @@
 import {
     getAllRocketEngineTotal,
     getAllRocketEngineThrustVacuumTotal
-} from "../modules/rockets.js";
+} from "../../modules/rockets.js";
 
 
 export const informRocketEngineThrustSeaLevel = async(thrust_sea_level)=>{
