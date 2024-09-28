@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpaceX Capsule Info</title>
+    <title>SpaceX Company Info</title>
     <link rel="shortcut icon" href="../imagen/cohete.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="./main.js" defer></script>
@@ -17,24 +17,12 @@
     </header>
 
     <main>
-        <div class="capsule-info">
-            <div class="launch-list" id="left"></div>
+        <div class="company-info">
             <div class="details">
                 <div class="content"></div>
             </div>
         </div>
     </main>
-
-    <nav class="pagination">
-        <button id="prev" onclick="prev()">&lt;&lt;</button>
-        <div class="page-numbers">
-            <button data-id="1" onclick="changePage()">1</button>
-            <button data-id="2" onclick="changePage()">2</button>
-            <button data-id="3" onclick="changePage()">3</button>
-            <button data-id="4" onclick="changePage()">4</button>
-        </div>
-        <button id="next" onclick="next()">&gt;&gt;</button>
-    </nav>
 
     <footer class="footer">
         <ul>
@@ -62,9 +50,11 @@
                     <span>History</span>
                 </a>
             </li>
-           
-           
         </ul>
     </footer>
+    <div class="content"></div>
+<div class="pagination" id="pagination"></div>
+
+
 </body>
 </html>

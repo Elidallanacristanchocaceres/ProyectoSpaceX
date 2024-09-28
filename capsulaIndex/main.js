@@ -51,6 +51,7 @@ function loadCapsuleData() {
 function displayCapsuleInfo(capsule) {
     document.querySelector('.content').innerHTML = `
         <h2>Capsule Info</h2>
+       
         <p>Reuse Count: ${capsule.reuse_count}</p>
         <p>Water Landings: ${capsule.water_landings}</p>
         <p>Land Landings: ${capsule.land_landings}</p>
