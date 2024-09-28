@@ -6,9 +6,6 @@ import {
     paginationRockets
  } from "./modulesComponents/Cohetes/paginaRockets.js";
 
- import { 
-    paginationCapsules
- } from "./modulesComponents/Capsulas/paginaCapsules.js";
 
 let footerSelect = async(e, id)=>{
     e.preventDefault();
@@ -33,11 +30,11 @@ rocket.addEventListener("click", async(e)=>{
 
 let capsules = document.querySelector("#capsules")
 capsules.addEventListener("click", async(e)=>{
-    await footerSelect(e, capsules)
-    let paginacion = document.querySelector("#paginacion");
-    paginacion.innerHTML = ""
-    paginacion.append(await paginationCapsules())
+    location.href="capsulaIndex/index.html"
+    // await footerSelect(e, capsules)
+    // let paginacion = document.querySelector("#paginacion");
+    // paginacion.innerHTML = ""
+    // paginacion.append(await paginationCapsules())
 })
 
-
-capsules.click();
+rocket.click()
