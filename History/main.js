@@ -108,11 +108,6 @@ function mostrarHistoria(historia) {
   });
 }
 
-
-
-
-
-
 // Función para devolver una imagen aleatoria local
 function obtenerImagenAleatoria() {
   const imagenes = [

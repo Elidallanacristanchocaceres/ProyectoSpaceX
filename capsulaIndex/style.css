@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    background: linear-gradient(#1A1C48, #4a7cbd);
     color: white;
 }
 
@@ -66,11 +66,6 @@ main {
     background: #16213e;
 }
 
-footer {
-    background: #0f3460;
-    padding: 1rem 0;
-}
-
 .button-group {
     display: flex;
     justify-content: center;
@@ -98,13 +93,11 @@ footer {
     font-weight: bold;
 }
 
-.footer {
-    /* background: coral; */
-    grid-area: section__footer;
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
-    grid-template-areas: ". footer__menu .";
+footer {
+    background: #0f3460;
+    padding: 1rem 0;
 }
+
 
 .footer ul {
     grid-area: footer__menu;

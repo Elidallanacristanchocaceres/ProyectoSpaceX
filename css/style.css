@@ -8,8 +8,7 @@
 }
 
 body {
-    background-color: #2D2F40;
-}
+    background: linear-gradient(#1A1C48, #4a7cbd);}
 
 *::-webkit-scrollbar {
     height: 10px;
@@ -321,7 +320,7 @@ body {
 
 .footer {
     /* background: coral; */
-    background-color: #0f3460;
+    background-color: #1A1C48;
     grid-area: section__footer;
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
@@ -335,7 +334,7 @@ body {
     align-items: center;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    background-color: #0f3460;
+    background-color: #1A1C48;
 }
 .footer ul::after{
     content: "";
