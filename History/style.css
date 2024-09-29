@@ -1,0 +1,143 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px; /* Limitar el ancho máximo */
+    margin: auto; /* Centrar el contenido */
+}
+
+#history {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Galería más espaciosa */
+    gap: 20px; /* Espacio entre tarjetas aumentado */
+}
+
+.event {
+    background-color: #ffffff;
+    border-radius: 10px; /* Borde más suave */
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s; /* Efecto al pasar el ratón */
+}
+
+.event:hover {
+    transform: scale(1.05); /* Ampliar ligeramente al pasar el ratón */
+}
+
+.event h2 {
+    margin-top: 0;
+    font-size: 1.1rem; /* Tamaño de fuente mayor */
+    color: #0f3460;
+}
+
+.event p {
+    color: #555;
+    font-size: 0.95rem; /* Aumento de tamaño de fuente */
+    line-height: 1.4;
+    max-height: 4.5em; /* Limitar la altura para evitar mucho texto */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Muestra "..." si el texto es muy largo */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.event img {
+    height: 150px; /* Ajusta la altura deseada */
+    width: 100%; /* Mantener el ancho al 100% */
+    object-fit: cover; /* Mantener la proporción y recortar si es necesario */
+    border-radius: 10px; /* Bordes redondeados si lo deseas */
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+}
+
+
+.event small {
+    color: #999;
+    margin-top: 10px;
+    font-size: 0.85rem; /* Tamaño de fuente menor */
+}
+
+.event a {
+    margin-top: 15px;
+    text-decoration: none;
+    color: #0f3460;
+    font-size: 0.95rem;
+    background-color: #f39c12; /* Fondo de botón */
+    padding: 8px 12px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición de color */
+}
+
+.event a:hover {
+    background-color: #e67e22; /* Color más oscuro al pasar el ratón */
+}
+
+.article-link {
+    margin-top: 15px; /* Espaciado arriba del botón */
+    text-decoration: none;
+    color: #0f3460;
+    background-color: #f39c12; /* Fondo del botón */
+    padding: 8px 12px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición de color */
+}
+
+.article-link:hover {
+    background-color: #e67e22; /* Color más oscuro al pasar el ratón */
+}
+
+
+/* Footer */
+footer {
+    background: #0f3460;
+    padding: 1rem 0;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: space-around; /* Espaciado uniforme */
+    align-items: center;
+    background-color: #16213e;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 1rem;
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.footer ul li a img {
+    width: 35px; /* Tamaño de iconos ajustado */
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.footer ul li a:hover {
+    color: #f39c12; /* Color de texto al pasar el ratón */
+}
