@@ -5,6 +5,7 @@ function changePage() {
     const buttons = document.querySelectorAll('.page-numbers button');
     buttons.forEach(button => {
         button.addEventListener('click', () => {
+            
             currentCapsule = button.getAttribute('data-id') - 1;
             loadCapsuleData();
         });
@@ -49,6 +50,7 @@ function loadCapsuleData() {
 }
 
 function displayCapsuleInfo(capsule) {
+    document.querySelector(".content"),innerHTML = ``;
     document.querySelector('.content').innerHTML = `
         <h2>Capsule Info</h2>
        
@@ -73,6 +75,7 @@ function loadLaunches(launchIds) {
         fetch(`https://api.spacexdata.com/v4/launches/${id}`)
             .then(response => response.json())
             .then(launch => {
+                launchList.innerHTML = ``;
                 launchList.innerHTML += `
                     <div class="launch-item">
                         <h3>${launch.name}</h3>
