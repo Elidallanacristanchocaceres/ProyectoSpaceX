@@ -70,8 +70,9 @@ function displayCompanyInfo(company, page) {
                     <p><strong>Valuation:</strong> ${company.valuation}</p>
                 </div>
                 <div class="info-item">
-                    <p><strong>Website:</strong> <a href="${company.links.website}" target="_blank">Visit</a></p>
-                </div>
+                    <p><strong>Website:</strong> <a href="${company.links.website}" target="_blank">Visit</a></p> 
+                    <p><strong>Twitter:</strong> <a href="${company.links.twitter}" target="_blank">Twitter</a></p> <!-- Añadido el enlace de Twitter -->
+                    </div>
             </div>
         `;
     }

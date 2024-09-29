@@ -172,7 +172,7 @@
                     div.classList.add("carousel__item")
                     let divFirst = document.createElement('div');
                     divFirst.classList.add("item__progress__bar");
-                    divFirst.style = `background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(var(--color--three) ${pocentaje}%, transparent 0)`
+                    divFirst.style = `background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(var(--color--six) ${pocentaje}%, transparent 0)`
                     let divFirstChildren = document.createElement('div');
                     divFirstChildren.classList.add("progress__value")
                     let strong = document.createElement('strong');
