@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: #0f3460;
+    background-color: #5d7a9e;
 }
 
 .logo img {
@@ -29,22 +29,24 @@ main {
     display: flex;
     justify-content: center;
     margin: 2rem auto;
+    height: 72vh;
 }
 
 .capsule-info {
-    display: flex;
-    width: 80%;
+    width: 100%;
 }
 
 .launch-list {
-    width: 40%;
-    border-right: 1px solid white;
-    padding-right: 1rem;
+    display: flex;
+    text-align: center;
+    margin-left: 43vw;
 }
 
 .details {
-    width: 60%;
-    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .pagination {
@@ -93,9 +95,17 @@ main {
     font-weight: bold;
 }
 
-footer {
+.astro{
+    margin-top: -35vh;
+}
+
+.footer {
     background: #0f3460;
     padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
 }
 
 
@@ -143,6 +153,7 @@ footer {
     flex-direction: column;
     align-items: center;
     color: var(--color--two);
+    padding-left: 60px;
 }
 
 @media (max-width: 600px) {
