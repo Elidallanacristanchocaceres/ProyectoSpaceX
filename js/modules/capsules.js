@@ -18,3 +18,4 @@ export const getAllCapsules = async ()=>{
     console.log(data);
     return data;
 }
+

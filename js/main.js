@@ -2,13 +2,10 @@
 import { 
     load 
 } from "./modulesComponents/variablesGlobales.js";
-import {
-    paginationRockets
-}from "./modulesComponents/cohete/pagination.js";
-
 import { 
-    paginationCompany
- } from "./modulesComponents/Company/paginationCompany.js";
+    paginationRockets
+ } from "./modulesComponents/Cohetes/paginaRockets.js";
+
 
 let footerSelect = async(e, id)=>{
     e.preventDefault();
@@ -35,14 +32,15 @@ rocket.addEventListener("click", async(e)=>{
 
 } )
 
-let Company = document.querySelector("#company")
-Company.addEventListener("click", async(e)=>{
-    await footerSelect(e, Company)
-    let paginacion = document.querySelector("#paginacion");
-    paginacion.innerHTML = ""
-    paginacion.append(await paginationCompany())
+let capsules = document.querySelector("#capsules")
+capsules.addEventListener("click", async(e)=>{
+    location.href="capsulaIndex/index.html"
+    // await footerSelect(e, capsules)
+    // let paginacion = document.querySelector("#paginacion");
+    // paginacion.innerHTML = ""
+    // paginacion.append(await paginationCapsules())
 })
 
 
 
-rocket.click();
+rocket.click()

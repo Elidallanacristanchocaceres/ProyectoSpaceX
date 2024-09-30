@@ -194,7 +194,7 @@ export const getAllRocketEngineThrustVacuumTotal  = async() =>{
             "content-type": "application/json"
         },
         method: "POST",
-        body: JSON.stringify({
+        body: JSON.stringify({  
             "options": {
                 "select": {
                     "engines": 1
