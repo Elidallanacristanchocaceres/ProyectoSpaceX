@@ -1,3 +1,10 @@
+@import url(../css/variables.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -106,22 +113,53 @@ main {
 
 /* Footer */
 .footer {
-    background: #1A1C48;
-    padding:0;
     position: fixed;
     bottom: 0;
-    height: 55px;
     width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: 38px 500px 38px;
+    grid-template-areas: ". footer__menu .";
+    z-index: 1000; /* para asegurar que el footer quede siempre por encima del contenido */
 }
 
 .footer ul {
+    grid-area: footer__menu;
+    background: var(--color--one);
     display: flex;
-    justify-content: space-around; /* Espaciado uniforme */
+    justify-content: space-between;
     align-items: center;
-    background-color: #1A1C48;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    padding: 1rem;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    height: 80px;
+}
+
+.footer ul::after {
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    right: -36px;
+    bottom: 0;
+    width: 0;
+    height: 21px;
+    border-left: 0px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 90px solid var(--color--one);
+}
+
+.footer ul::before {
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    left: -36px;
+    bottom: 0;
+    width: 0;
+    height: 21px;
+    border-left: 45px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 90px solid var(--color--one);
 }
 
 .footer ul li {
@@ -133,15 +171,5 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
-}
-
-.footer ul li a img {
-    width: 35px; /* Tamaño de iconos ajustado */
-    height: 35px;
-    margin-top: -35px;
-}
-
-.footer ul li a:hover {
-    color: #f39c12; /* Color de texto al pasar el ratón */
+    color: var(--color--two);
 }

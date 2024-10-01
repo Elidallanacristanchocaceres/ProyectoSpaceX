@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    background-color: #5d7a9e;
+    background-color: #0f3460;
     width: 100%;
 }
 
@@ -26,6 +26,7 @@ header {
     display: flex;
     justify-content: right;
 }
+
 .logo{
     display: flex;
     align-items: center;
@@ -150,7 +151,7 @@ main {
 .cohete img{
     position: absolute;
     left: 85%;
-    top: 10%;
+    top: 15%;
     width: 160px;
 }
 
