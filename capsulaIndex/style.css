@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: cover;
+    height: 100vh;
 }
 
 header {
@@ -36,7 +36,7 @@ header {
 }
 
 .last-update {
-    margin-left: auto; /* Para que se alinee a la derecha */
+    margin-right: 50px;
 }
 
 main {
@@ -44,7 +44,7 @@ main {
     flex-direction: column;
     align-items: center; /* Centra todos los elementos */
     width: 100%;
-    padding: 20px; /* Espacio alrededor de main */
+    padding: 80px; /* Espacio alrededor de main */
     margin-bottom: 10vh;
     overflow-y: auto;
 }
@@ -138,6 +138,21 @@ main {
 .page-numbers button:active {
     transform: scale(0.95); /* Reduce el tamaño al hacer clic */
 }
+.astro img {
+    position: absolute;
+    left: 10%; 
+    top: 45%; 
+    max-width: 260px; 
+    z-index: 1; 
+    animation: move-astro 2s ease-in-out infinite;
+}
+
+.cohete img{
+    position: absolute;
+    left: 85%;
+    top: 10%;
+    width: 160px;
+}
 
 
 .footer {
@@ -200,15 +215,6 @@ main {
     flex-direction: column;
     align-items: center;
     color: var(--color--two);
-}
-
-.astro img {
-    position: absolute;
-    left: 10%; 
-    top: 55%; 
-    max-width: 200px; 
-    z-index: 1; 
-    animation: move-astro 2s ease-in-out infinite;
 }
 
 @keyframes move-astro {
