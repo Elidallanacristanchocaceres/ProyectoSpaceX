@@ -32,6 +32,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Galería más espaciosa */
     gap: 20px; /* Espacio entre tarjetas aumentado */
+    margin-bottom: 15vh;
 }
 
 .event {
