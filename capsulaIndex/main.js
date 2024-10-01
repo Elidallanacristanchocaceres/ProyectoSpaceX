@@ -5,7 +5,6 @@ function changePage() {
     const buttons = document.querySelectorAll('.page-numbers button');
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            
             currentCapsule = button.getAttribute('data-id') - 1;
             loadCapsuleData();
         });
@@ -50,10 +49,8 @@ function loadCapsuleData() {
 }
 
 function displayCapsuleInfo(capsule) {
-    document.querySelector(".content"),innerHTML = ``;
     document.querySelector('.content').innerHTML = `
         <h2>Capsule Info</h2>
-       
         <p>Reuse Count: ${capsule.reuse_count}</p>
         <p>Water Landings: ${capsule.water_landings}</p>
         <p>Land Landings: ${capsule.land_landings}</p>
@@ -75,8 +72,7 @@ function loadLaunches(launchIds) {
         fetch(`https://api.spacexdata.com/v4/launches/${id}`)
             .then(response => response.json())
             .then(launch => {
-                launchList.innerHTML = ``;
-                launchList.innerHTML += `
+                launchList.innerHTML = `
                     <div class="launch-item">
                         <h3>${launch.name}</h3>
                         <p>${launch.details || 'Details not available'}</p>
@@ -87,5 +83,4 @@ function loadLaunches(launchIds) {
     });
 }
 
-// Initial call to load data
-loadCapsuleData();
+loadCapsuleData(); // Cargar datos iniciales
