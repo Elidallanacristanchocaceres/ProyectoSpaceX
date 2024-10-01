@@ -26,7 +26,7 @@ function displayCompanyInfo(company, page) {
                 <div class="info-item">
                     <p><strong>Founded:</strong> ${company.founded}</p>
                 </div>
-                <div class="info-item">
+                <div class="info-item2">
                     <p><strong>Employees:</strong> ${company.employees}</p>
                 </div>
             </div>
@@ -46,7 +46,7 @@ function displayCompanyInfo(company, page) {
                 <div class="info-item">
                     <p><strong>CTO:</strong> ${company.cto}</p>
                 </div>
-                <div class="info-item">
+                <div class="info-item2">
                     <p><strong>CTO Propulsion:</strong> ${company.cto_propulsion}</p>
                 </div>
             </div>

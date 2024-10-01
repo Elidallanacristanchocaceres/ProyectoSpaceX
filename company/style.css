@@ -1,8 +1,8 @@
+@import url(../css/variables.css);
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 body {
@@ -16,6 +16,7 @@ header {
     justify-content: space-between;
     padding: 1rem 2rem;
     background-color: #0f3460;
+    height: 45px;
 }
 
 .logo img {
@@ -33,13 +34,13 @@ main {
 }
 
 .company-info {
-    display: flex;
-    width: 60%;
+    display: flex; /* Mantener el layout en flex */
+    width: 60%; /* Mantener el ancho del contenedor */
+    justify-content: flex-start; /* Alinear al inicio */
 }
 
 .details {
-    width: 100%;
-    padding-left: 1rem;
+    flex: 1;
 }
 
 .content {
@@ -47,7 +48,6 @@ main {
     border-radius: 8px; /* Bordes redondeados */
     padding: 10px; /* Espaciado interno */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
-    margin-bottom: 20px; /* Espaciado inferior */
     transition: transform 0.3s; /* Transición suave al pasar el mouse */
 }
 
@@ -86,6 +86,18 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.info-item2 {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 20px;
+}
+
+.info-item2 p{
+    margin: 0;
+}
+
 .cohete img {
     height: auto;
     display: block;
@@ -94,8 +106,8 @@ main {
 
 .pagination {
     display: flex;
-    justify-content: center;
-    margin: 20px 0;
+    margin-left: 20px; /* Espacio entre el contenido y la paginación */
+    width: 100px; /* Ajusta el ancho según sea necesario */
 }
 
 .page-button {
@@ -107,6 +119,7 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 5px; /* Espacio entre los botones de paginación */
 }
 
 .page-button.active {
@@ -122,41 +135,54 @@ main {
     margin: 20px 0;
 }
 
-
 .footer {
-    background: #0f3460;
     position: fixed;
     bottom: 0;
-    height: 60px;
-    display: flex;
     width: 100%;
-    justify-content: center;
+    display: grid;
     align-items: center;
-}
-
-.icon-button {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
-    position: relative;
-}
-
-.icon-button:hover::after {
-    content: '';
-    display: block;
-    width: 80%;
-    height: 2px;
-    background: white;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: 38px 500px 38px;
+    grid-template-areas: ". footer__menu .";
+    z-index: 1000; /* para asegurar que el footer quede siempre por encima del contenido */
 }
 
 .footer ul {
+    grid-area: footer__menu;
+    background: var(--color--one);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    height: 55px;
+}
+
+.footer ul::after {
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    right: -36px;
+    bottom: 0;
+    width: 0;
+    height: 45px;
+    border-left: 0px solid transparent;
+    border-right: 46px solid transparent;
+    border-bottom: 90px solid var(--color--one);
+}
+
+.footer ul::before {
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    left: -36px;
+    bottom: 0;
+    width: 0;
+    height: 45px;
+    border-left: 46px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 90px solid var(--color--one);
 }
 
 .footer ul li {
@@ -170,7 +196,6 @@ main {
     align-items: center;
     color: var(--color--two);
 }
-
 @media (max-width: 600px) {
     header {
         flex-direction: column;

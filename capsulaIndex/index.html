@@ -17,6 +17,9 @@
     </header>
 
     <main>
+        <div class="astro">
+            <img src="/capsulaIndex/images/astro.png" alt="">
+        </div>
         <div class="capsule-info">
             <div class="launch-list" id="left"></div>
             <div class="details">
@@ -25,50 +28,53 @@
         </div>
     </main>
 
-    <div class="astro">
-        <img src="/capsulaIndex/images/astro.png" alt="">
-    </div>
-
     <nav class="pagination">
         <button id="prev" onclick="prev()">&lt;&lt;</button>
         <div class="page-numbers">
+            
             <button data-id="1" onclick="changePage()">1</button>
             <button data-id="2" onclick="changePage()">2</button>
             <button data-id="3" onclick="changePage()">3</button>
             <button data-id="4" onclick="changePage()">4</button>
+            
         </div>
         <button id="next" onclick="next()">&gt;&gt;</button>
+        
     </nav>
 
     <footer class="footer">
         <ul>
             <li id="rocket">
-                <a class="icon-button" href="../index.html"> 
-                    <img src="/storage/img/icons/rocket.svg">
+                <a  href="../index.html">
+                    <img src="../storage/img/icons/rocket.svg">
                     <span>Rockets</span>
                 </a>
             </li>
-            <li id="capsules">
-                <a href="../capsulaIndex/index.html">
-                    <img src="/storage/img/icons/capsule.svg">
+            <li id="capsule">
+                <a  href="../capsulaIndex/index.html">
+                    <img src="../storage/img/icons/capsule.svg">
                     <span>Capsules</span>
                 </a>
             </li>
-            <li>
-                <a href="../COMPANY/index.html">
-                    <img src="/storage/img/icons/company.svg">
+            <li id="history">
+                <a class="select" href="../company/index.html">
+                    <img src="../storage/img/icons/company.svg">
                     <span>Company</span>
                 </a>
             </li>
-            <li>
-                <a href="../HISTORY/index.html">
-                    <img src="/storage/img/icons/history.svg">
+            <li id="company">
+                <a  href="../History/index.html">
+                    <img src="../storage/img/icons/history.svg">
                     <span>History</span>
                 </a>
             </li>
-           
-           
         </ul>
     </footer>
+
+    
+
+    
+
+    
 </body>
 </html>
