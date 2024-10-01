@@ -9,6 +9,9 @@ body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #1a1a2e, #16213e);
     color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
 
 header {
@@ -31,12 +34,12 @@ main {
     display: flex;
     justify-content: center;
     margin: 15px auto;
+    flex: 1;
 }
 
 .company-info {
-    display: flex; /* Mantener el layout en flex */
-    width: 60%; /* Mantener el ancho del contenedor */
-    justify-content: flex-start; /* Alinear al inicio */
+    width: 60%;
+    justify-content: flex-start;
 }
 
 .details {
@@ -44,32 +47,31 @@ main {
 }
 
 .content {
-    background-color: #0f3460; /* Color de fondo para la sección */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 10px; /* Espaciado interno */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
-    transition: transform 0.3s; /* Transición suave al pasar el mouse */
+    background-color: #0f3460;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
 .content:hover {
-    transform: scale(1.02); /* Efecto de aumento al pasar el mouse */
+    transform: scale(1.02);
 }
 
 .content h2 {
-    color: #f0f0f0; /* Color del título */
-    margin-bottom: 10px; /* Espaciado inferior */
+    color: #f0f0f0;
+    margin-bottom: 10px;
 }
 
 .content p {
-    color: #dcdcdc; /* Color del texto */
-    margin: 5px 0; /* Espaciado superior e inferior */
     color: black;
+    margin: 5px 0;
 }
 
 .content img {
-    width: 40%; /* Ancho completo */
-    border-radius: 8px; /* Bordes redondeados */
-    margin-bottom: 15px; /* Espaciado inferior */
+    width: 40%;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .info-grid {
@@ -78,56 +80,11 @@ main {
     gap: 20px;
 }
 
-
 .info-item {
     background-color: #f0f0f0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.info-item2 {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 20px;
-}
-
-.info-item2 p{
-    margin: 0;
-}
-
-.cohete img {
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.pagination {
-    display: flex;
-    margin-left: 20px; /* Espacio entre el contenido y la paginación */
-    width: 100px; /* Ajusta el ancho según sea necesario */
-}
-
-.page-button {
-    padding: 10px 15px;
-    margin: 0 5px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 5px; /* Espacio entre los botones de paginación */
-}
-
-.page-button.active {
-    background-color: #0056b3;
-}
-
-.page-button:hover {
-    background-color: #0056b3;
 }
 
 .cohete {
@@ -136,53 +93,18 @@ main {
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
+    background: #0f3460;
+    padding: 10px 0;
     width: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    grid-template-columns: 38px 500px 38px;
-    grid-template-areas: ". footer__menu .";
-    z-index: 1000; /* para asegurar que el footer quede siempre por encima del contenido */
+    display: flex;
+    justify-content: space-around;
+    position: relative; 
 }
 
 .footer ul {
-    grid-area: footer__menu;
-    background: var(--color--one);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top-left-radius: 36px;
-    border-top-right-radius: 36px;
-    height: 55px;
-}
-
-.footer ul::after {
-    content: "";
-    position: relative;
-    margin-top: 10px;
-    right: -36px;
-    bottom: 0;
-    width: 0;
-    height: 45px;
-    border-left: 0px solid transparent;
-    border-right: 46px solid transparent;
-    border-bottom: 90px solid var(--color--one);
-}
-
-.footer ul::before {
-    content: "";
-    position: relative;
-    margin-top: 10px;
-    left: -36px;
-    bottom: 0;
-    width: 0;
-    height: 45px;
-    border-left: 46px solid transparent;
-    border-right: 0px solid transparent;
-    border-bottom: 90px solid var(--color--one);
+    justify-content: space-around;
+    width: 100%;
 }
 
 .footer ul li {
@@ -194,8 +116,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--color--two);
+    color: white;
 }
+
 @media (max-width: 600px) {
     header {
         flex-direction: column;
@@ -204,9 +127,5 @@ main {
 
     .company-info {
         flex-direction: column;
-    }
-
-    .details {
-        width: 100%;
     }
 }
