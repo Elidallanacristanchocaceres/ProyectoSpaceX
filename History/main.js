@@ -1,6 +1,6 @@
 // Variables globales para paginación
 let historia = [];
-const eventosPorPagina = 5; // Cambia esto si deseas más eventos por página
+const eventosPorPagina = 4; // Cambia esto si deseas más eventos por página
 let paginaActual = 1;
 
 // Función para obtener los datos del API de SpaceX
@@ -158,10 +158,7 @@ function crearBotonesPaginacion() {
     paginationDiv.appendChild(button);
   }
 
-  // Añadir un indicador de página actual
-  const currentPageIndicator = document.createElement('span');
-  currentPageIndicator.textContent = `Página ${paginaActual} de ${totalPaginas}`;
-  paginationDiv.appendChild(currentPageIndicator);
+  
 }
 
 // Función para devolver una imagen aleatoria local

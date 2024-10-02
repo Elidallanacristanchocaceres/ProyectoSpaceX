@@ -8,7 +8,9 @@
 }
 
 body {
-    background: linear-gradient(#1A1C48, #4a7cbd);}
+    background: linear-gradient(#1A1C48, #15184d, #4a7cbd);
+    height: 100vh;
+}
 
 *::-webkit-scrollbar {
     height: 10px;
@@ -489,11 +491,20 @@ progress[value]::-moz-progress-bar {
         grid-template-rows: max-content auto auto;
         height: max-content;
     }
-
-    .description__item {
-        margin-bottom: 0;
+    .nav__description {
+        margin-top: 0;
+        justify-content: start;
+        height: max-content;
+        margin-bottom: 5vh;
     }
-
+    .description__item {
+        height: 500px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .description__buttom {
+        display: none;
+    }
     .main__section {
         display: flex;
         flex-direction: column;

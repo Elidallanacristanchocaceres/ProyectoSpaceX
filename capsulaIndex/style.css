@@ -141,18 +141,19 @@ main {
 }
 .astro img {
     position: absolute;
-    left: 2%; 
-    top: 45%; 
-    max-width: 260px; 
+    left: 10vw; 
+    top: 20vw; 
+    max-width: 160px; 
     z-index: 1; 
-    animation: move-astro 2s ease-in-out infinite;
+    animation: move-astro 3s ease-in-out infinite;
 }
 
 .cohete img{
     position: absolute;
-    left: 85%;
-    top: 15%;
+    right: 10vw;
+    top: 20vw;
     width: 160px;
+    animation: move-astro 3s ease-in-out infinite;
 }
 
 
