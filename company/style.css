@@ -1,0 +1,258 @@
+@import url(../css/variables.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1f497c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #0f3460;
+    height: 60px;
+    z-index: 1000;
+}
+
+.logo img {
+    width:250px; /* Ajuste para pantallas pequeñas */
+}
+
+.last-update {
+    align-self: center;
+}
+.astronautaReal img {
+    position: absolute;
+    left: 2vw;
+    top: 40vh;
+    
+    width: 260px;
+}
+.coheteReal img {
+    position: absolute;
+    right: 5vw;
+    top: 30vh;
+    animation: move-cohete 5s ease-in-out infinite;
+    width: 240px;
+}
+
+@keyframes move-cohete {
+    0% {
+        transform: translateY(50px);
+    }
+    10% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(50px);
+    }
+    30% {
+        transform: translateY(0px);
+    }
+
+    40% {
+        transform: translateY(50px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+
+    60% {
+        transform: translateY(0px) ;
+    }
+
+    80% {
+        transform: translateY(-100vh);
+    }
+
+    100% {
+        transform: translateY(50px); 
+    }
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 45px auto;
+    flex: 1;
+}
+
+.company-info {
+    width: 80%; /* Ajuste base para una mejor adaptabilidad */
+    justify-content: flex-start;
+}
+
+.details {
+    flex: 1;
+}
+
+.content {
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(15, 15, 15, 0.774);
+    transition: transform 0.3s;
+    margin-top: 45px;
+    margin-bottom: 15vh;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+.content h2 {
+    color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: black;
+    margin: 5px 0;
+}
+
+.content img {
+    width: 100%; /* Ajuste para que la imagen sea responsive */
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.info-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cohete {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: 38px 500px 38px;
+    grid-template-areas: ". footer__menu .";
+    z-index: 1000; /* para asegurar que el footer quede siempre por encima del contenido */
+}
+
+.footer ul {
+    grid-area: footer__menu;
+    background: var(--color--one);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    height: 80px;
+}
+
+.footer ul::after {
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    right: -36px;
+    bottom: 0;
+    width: 0;
+    height: 21px;
+    border-left: 0px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 90px solid var(--color--one);
+}
+
+.footer ul::before {
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    left: -36px;
+    bottom: 0;
+    width: 0;
+    height: 21px;
+    border-left: 45px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 90px solid var(--color--one);
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color--two);
+}
+
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    .company-info {
+        width: 60%;
+    }
+}
+
+/* Ajustes para tabletas */
+@media (max-width: 1024px) and (min-width: 600px) {
+    .company-info {
+        width: 80%;
+    }
+    .content {
+        width: 90%;
+        max-width: 800px;
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo img {
+        width: 120px; /* Reducción del logo para móviles */
+    }
+    .coheteReal{
+        display: none;
+    }
+
+    .company-info {
+        width: 95%;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    .astronautaReal {
+        display: none;
+    }
+    
+}

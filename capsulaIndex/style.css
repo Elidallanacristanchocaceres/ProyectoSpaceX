@@ -1,0 +1,315 @@
+@import url(variables.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* background: linear-gradient(#1A1C48, #4a7cbd); */
+    background: var(--color--gradient);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    background-color: #0f3460;
+    width: 100%;
+}
+
+.last-update{
+    display: flex;
+    justify-content: right;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.logo img {
+    width: 200px; /* Ajustado el tamaño del logo */
+}
+
+.last-update {
+    margin-right: 50px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todos los elementos */
+    width: 100%;
+    padding: 80px; /* Espacio alrededor de main */
+    margin-bottom: 10vh;
+    overflow-y: auto;
+}
+
+.capsule-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Espacio interno */
+    background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    border-radius: 8px;
+    width: 100%; /* Asegura que use el ancho disponible */
+    max-width: 600px; /* Limita el ancho máximo */
+    margin-bottom: 20px; /* Espacio inferior */
+    box-shadow: 0px 0px 10px rgba(15, 15, 15, 0.774);;
+}
+
+.launch-list {
+    display: flex;
+    flex-direction: column; /* Coloca cada lanzamiento en una columna */
+    align-items: center; /* Centra elementos dentro de launch-list */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+.launch-list img {
+    width: 180px;
+}
+
+.details {
+    padding: 20px; /* Espacio interno */
+    background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px; /* Limita el ancho máximo */
+    text-align: center; /* Centra el texto */
+}
+
+.pagination {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: right; 
+    width: 100%;
+    position: fixed;
+    bottom: 80px;  
+}
+
+#prev,#next {
+    border: 0px;
+    box-shadow: 0px 0px 10px var(--color--one);
+    border-radius: 5px;
+    
+}
+#prev:hover, #next:hover{
+    cursor: -webkit-grab;
+}
+#prev {
+    background-color: #5d7a9e;
+    width:40px;
+    margin-right: 5px;
+}
+
+#next {
+    background-color: #5d7a9e;
+    width:40px;
+    margin-left: 5px;
+}
+.page-numbers {
+    display: flex;
+    gap: 0.5rem; 
+}
+
+
+.page-numbers button {
+    background: #0f3460;
+    color: white;
+    border: none; /* Elimina el borde predeterminado */
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Añadir una transición para la transformación */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+.page-numbers button:hover {
+    background: #16213e;
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+.page-numbers button:active {
+    transform: scale(0.95); /* Reduce el tamaño al hacer clic */
+}
+.astro img {
+    position: absolute;
+    left: 10vw; 
+    top: 20vw; 
+    max-width: 160px; 
+    z-index: 1; 
+    animation: move-astro 3s ease-in-out infinite;
+}
+
+.cohete img{
+    position: absolute;
+    right: 10vw;
+    top: 20vw;
+    width: 160px;
+    animation: move-astro 3s ease-in-out infinite;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: 38px 500px 38px;
+    grid-template-areas: ". footer__menu .";
+    z-index: 1000; /* para asegurar que el footer quede siempre por encima del contenido */
+}
+
+.footer ul {
+    grid-area: footer__menu;
+    background: var(--color--one);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    height: 80px;
+}
+
+.footer ul::after {
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    right: -36px;
+    bottom: 0;
+    width: 0;
+    height: 21px;
+    border-left: 0px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 90px solid var(--color--one);
+}
+
+.footer ul::before {
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    left: -36px;
+    bottom: 0;
+    width: 0;
+    height: 21px;
+    border-left: 45px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 90px solid var(--color--one);
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color--two);
+}
+
+@keyframes move-astro {
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+@media (min-width: 601px) {
+    .logo img {
+        width: 200px; /* Tamaño del logo en pantallas grandes */
+    }
+
+    main {
+        padding: 80px; /* Espacio alrededor de main */
+    }
+
+    .capsule-info {
+        width: 60%; /* Ancho en pantallas grandes */
+        max-width: 800px; /* Limita el ancho máximo */
+    }
+
+    .pagination {
+        bottom: 80px; /* Fijar los botones de paginación */
+    }
+
+    .details {
+        margin-top: 35px;
+        margin-bottom: 10vh;
+    }
+
+    .logo img {
+        width: 120px; /* Más pequeño para iPhone 14 */
+    }
+
+}
+
+@media (min-width: 601px) {
+    .logo img {
+        width: 200px; /* Tamaño del logo en pantallas grandes */
+    }
+
+    main {
+        padding: 80px; /* Espacio alrededor de main */
+    }
+
+    .capsule-info {
+        width: 60%; /* Ancho en pantallas grandes */
+        max-width: 800px; /* Limita el ancho máximo */
+    }
+
+    .pagination {
+        bottom: 80px; /* Fijar los botones de paginación */
+    }
+}
+
+/* Ajustes para pantallas pequeñas y iPhone 14 */
+@media (max-width: 600px) {
+    .astro img,
+    .cohete img {
+        display: none; /* Ocultar el astro y el cohete */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .capsule-info {
+        width: 95%; /* Permitir más ancho en pantallas pequeñas */
+        max-width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+
+    .pagination {
+        flex-direction: row; /* Mantener los botones de paginación en fila */
+        justify-content: center; /* Centrar los botones */
+        margin-top: 20px; /* Espacio superior para separar de contenido */
+        padding: 10px; /* Añadir padding para mejor presentación */
+    }
+
+    .pagination button {
+        margin: 0 5px; /* Espaciado horizontal entre botones */
+        padding: 0.5rem 0.8rem; /* Área de clic más grande */
+    }
+
+
+    @media (max-width: 390px) {
+        .logo img {
+            width: 120px; /* Más pequeño para iPhone 14 */
+        }
+
+        .capsule-info {
+            padding: 15px; /* Ajuste del padding para mejor presentación */
+        }
+    }
+}

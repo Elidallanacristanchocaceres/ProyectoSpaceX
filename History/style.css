@@ -1,0 +1,203 @@
+@import url(../css/variables.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#1A1C48, #4a7cbd);
+    color: #333;
+    height: 100vh;
+}
+
+header {
+    background-color: #0f3460;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px; /* Limitar el ancho máximo */
+    margin: auto; /* Centrar el contenido */
+}
+
+#history {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Galería más espaciosa */
+    gap: 20px; /* Espacio entre tarjetas aumentado */
+    margin-bottom: 15vh;
+}
+
+.event {
+    background-color: #ffffff;
+    border-radius: 10px; /* Borde más suave */
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s; /* Efecto al pasar el ratón */
+    height: 400px;
+}
+
+.event:hover {
+    transform: scale(1.05); /* Ampliar ligeramente al pasar el ratón */
+}
+
+.event h2 {
+    margin-top: 0;
+    font-size: 1.1rem; /* Tamaño de fuente mayor */
+    color: #0f3460;
+}
+
+.event p {
+    color: #555;
+    font-size: 0.95rem; /* Aumento de tamaño de fuente */
+    line-height: 1.4;
+    
+    overflow: hidden;
+    text-overflow: ellipsis; /* Muestra "..." si el texto es muy largo */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.event img {
+    height: 150px; /* Ajusta la altura deseada */
+    width: 100%; /* Mantener el ancho al 100% */
+    object-fit: cover; /* Mantener la proporción y recortar si es necesario */
+    border-radius: 10px; /* Bordes redondeados si lo deseas */
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+}
+
+
+.event small {
+    color: #999;
+    margin-top: 10px;
+    font-size: 0.85rem; /* Tamaño de fuente menor */
+}
+
+.event a {
+    margin-top: 15px;
+    text-decoration: none;
+    color: #0f3460;
+    font-size: 0.95rem;
+    background-color: #7fa3c0; /* Fondo de botón */
+    padding: 8px 12px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición de color */
+}
+
+.event a:hover {
+    background-color: #e67e22; /* Color más oscuro al pasar el ratón */
+}
+
+.article-link {
+    margin-top: 15px; /* Espaciado arriba del botón */
+    text-decoration: none;
+    color: #0f3460;
+    background-color: #f39c12; /* Fondo del botón */
+    padding: 8px 12px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición de color */
+}
+
+.article-link:hover {
+    background-color: #e67e22; /* Color más oscuro al pasar el ratón */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Espacio entre la paginación y la sección de historia */
+}
+
+.pagination button {
+    margin: 0 5px; /* Espacio entre los botones */
+    padding: 8px 12px;
+    background-color: #0f3460; /* Color del botón */
+    color: white; /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #e67e22; /* Color al pasar el ratón */
+}
+
+.pagination span {
+    margin: 0 5px;
+    align-self: center; /* Centrar el texto */
+}
+
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: 38px 500px 38px;
+    grid-template-areas: ". footer__menu .";
+    z-index: 1000; /* para asegurar que el footer quede siempre por encima del contenido */
+}
+
+.footer ul {
+    grid-area: footer__menu;
+    background: var(--color--one);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    height: 80px;
+}
+
+.footer ul::after {
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    right: -36px;
+    bottom: 0;
+    width: 0;
+    height: 21px;
+    border-left: 0px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 90px solid var(--color--one);
+}
+
+.footer ul::before {
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    left: -36px;
+    bottom: 0;
+    width: 0;
+    height: 21px;
+    border-left: 45px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 90px solid var(--color--one);
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color--two);
+}
