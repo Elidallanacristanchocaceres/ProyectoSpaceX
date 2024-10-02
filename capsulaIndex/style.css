@@ -141,7 +141,7 @@ main {
 }
 .astro img {
     position: absolute;
-    left: 10%; 
+    left: 2%; 
     top: 45%; 
     max-width: 260px; 
     z-index: 1; 
@@ -224,17 +224,91 @@ main {
     }
 }
 
+@media (min-width: 601px) {
+    .logo img {
+        width: 200px; /* Tamaño del logo en pantallas grandes */
+    }
+
+    main {
+        padding: 80px; /* Espacio alrededor de main */
+    }
+
+    .capsule-info {
+        width: 60%; /* Ancho en pantallas grandes */
+        max-width: 800px; /* Limita el ancho máximo */
+    }
+
+    .pagination {
+        bottom: 80px; /* Fijar los botones de paginación */
+    }
+
+    .details {
+        margin-top: 35px;
+        margin-bottom: 10vh;
+    }
+
+    .logo img {
+        width: 120px; /* Más pequeño para iPhone 14 */
+    }
+
+}
+
+@media (min-width: 601px) {
+    .logo img {
+        width: 200px; /* Tamaño del logo en pantallas grandes */
+    }
+
+    main {
+        padding: 80px; /* Espacio alrededor de main */
+    }
+
+    .capsule-info {
+        width: 60%; /* Ancho en pantallas grandes */
+        max-width: 800px; /* Limita el ancho máximo */
+    }
+
+    .pagination {
+        bottom: 80px; /* Fijar los botones de paginación */
+    }
+}
+
+/* Ajustes para pantallas pequeñas y iPhone 14 */
 @media (max-width: 600px) {
+    .astro img,
+    .cohete img {
+        display: none; /* Ocultar el astro y el cohete */
+    }
+
     header {
         flex-direction: column;
         align-items: center;
     }
-    
-    .capsule-info, .details {
-        max-width: 100%; /* Asegura que ocupe todo el ancho en móviles */
+
+    .capsule-info {
+        width: 95%; /* Permitir más ancho en pantallas pequeñas */
+        max-width: 100%; /* Asegura que ocupe todo el ancho disponible */
     }
-    
+
     .pagination {
-        flex-direction: column;
+        flex-direction: row; /* Mantener los botones de paginación en fila */
+        justify-content: center; /* Centrar los botones */
+        margin-top: 20px; /* Espacio superior para separar de contenido */
+        padding: 10px; /* Añadir padding para mejor presentación */
+    }
+
+    .pagination button {
+        margin: 0 5px; /* Espaciado horizontal entre botones */
+        padding: 0.5rem 0.8rem; /* Área de clic más grande */
+    }
+
+
+    @media (max-width: 390px) {
+        .logo img {
+            width: 120px; /* Más pequeño para iPhone 14 */
+        }
+
+        .capsule-info {
+            padding: 15px; /* Ajuste del padding para mejor presentación */
+        }
     }
 }

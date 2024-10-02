@@ -112,6 +112,32 @@ main {
     background-color: #e67e22; /* Color más oscuro al pasar el ratón */
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Espacio entre la paginación y la sección de historia */
+}
+
+.pagination button {
+    margin: 0 5px; /* Espacio entre los botones */
+    padding: 8px 12px;
+    background-color: #0f3460; /* Color del botón */
+    color: white; /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #e67e22; /* Color al pasar el ratón */
+}
+
+.pagination span {
+    margin: 0 5px;
+    align-self: center; /* Centrar el texto */
+}
+
+
 /* Footer */
 .footer {
     position: fixed;
