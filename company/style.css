@@ -11,7 +11,7 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
 header {
@@ -23,11 +23,18 @@ header {
 }
 
 .logo img {
-    width: 200px;
+    width: 150px; /* Ajuste para pantallas pequeñas */
 }
 
 .last-update {
     align-self: center;
+}
+
+.espacio img{
+    position: absolute;
+    left: 82%;
+    top: 40%;
+    width: 240px;
 }
 
 main {
@@ -38,7 +45,7 @@ main {
 }
 
 .company-info {
-    width: 60%;
+    width: 80%; /* Ajuste base para una mejor adaptabilidad */
     justify-content: flex-start;
 }
 
@@ -49,7 +56,7 @@ main {
 .content {
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(15, 15, 15, 0.774);;
+    box-shadow: 0px 0px 10px rgba(15, 15, 15, 0.774);
     transition: transform 0.3s;
     margin-bottom: 15vh;
     background: rgba(255, 255, 255, 0.1);
@@ -70,7 +77,8 @@ main {
 }
 
 .content img {
-    width: 40%;
+    width: 100%; /* Ajuste para que la imagen sea responsive */
+    max-width: 300px;
     border-radius: 8px;
     margin-bottom: 15px;
 }
@@ -103,7 +111,7 @@ main {
     height: auto;
     grid-template-columns: 38px 500px 38px;
     grid-template-areas: ". footer__menu .";
-    z-index: 1000; /* para asegurar que el footer quede siempre por encima del contenido */
+    z-index: 2000;
 }
 
 .footer ul {
@@ -114,33 +122,6 @@ main {
     align-items: center;
     border-top-left-radius: 36px;
     border-top-right-radius: 36px;
-    height: 80px;
-}
-
-.footer ul::after {
-    content: "";
-    position: relative;
-    margin-top: 10px;
-    right: -36px;
-    bottom: 0;
-    width: 0;
-    height: 21px;
-    border-left: 0px solid transparent;
-    border-right: 45px solid transparent;
-    border-bottom: 90px solid var(--color--one);
-}
-
-.footer ul::before {
-    content: "";
-    position: relative;
-    margin-top: 10px;
-    left: -36px;
-    bottom: 0;
-    width: 0;
-    height: 21px;
-    border-left: 45px solid transparent;
-    border-right: 0px solid transparent;
-    border-bottom: 90px solid var(--color--one);
 }
 
 .footer ul li {
@@ -155,71 +136,65 @@ main {
     color: var(--color--two);
 }
 
+/* Pantallas grandes */
 @media (min-width: 1024px) {
     .company-info {
         width: 60%;
-        justify-content: flex-start;
     }
 }
 
-/* Ajustes para pantallas medianas */
+/* Ajustes para tabletas */
 @media (max-width: 1024px) and (min-width: 600px) {
     .company-info {
         width: 80%;
     }
+    .content {
+        width: 90%;
+        max-width: 800px;
+    }
 }
 
-/* Ajustes para pantallas pequeñas */
+/* Ajustes para móviles */
 @media (max-width: 600px) {
     header {
         flex-direction: column;
         align-items: center;
     }
-    .company-info {
-        width: 90%;
+    
+    .logo img {
+        width: 120px; /* Reducción del logo para móviles */
     }
-    @media (max-width: 600px) {
-        .footer {
-            position: relative; /* Cambia a relativo para que no esté fijo */
-        }
-        
-        .footer ul {
-            flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-            align-items: center; /* Centrar los elementos */
-            gap: 10px; /* Espacio entre los elementos */
-            padding: 10px 0; /* Ajustar el padding para más espacio vertical */
-        }
-    
-        .footer ul li {
-            width: auto; /* Ancho automático para evitar que se estiren */
-            text-align: center; /* Centrar el texto */
-        }
-    
-        .footer ul li a {
-            padding: 10px; /* Añadir padding a los enlaces para que sean más fáciles de tocar */
-            color: white; /* Asegúrate de que el texto sea legible */
-            display: flex; /* Hacer que el enlace se comporta como flexbox */
-            flex-direction: column; /* Apilar imagen y texto */
-            align-items: center; /* Centrar contenido */
-        }
-    
-        .footer ul li img {
-            width: 30px; /* Ajustar el tamaño de las imágenes en pantallas pequeñas */
-            height: auto; /* Mantener la relación de aspecto */
-            margin-bottom: 5px; /* Espacio entre la imagen y el texto */
-        }
-    
+    .espacio{
+        display: none;
+    }
 
-    @media (max-width: 844px) {
-        .footer {
-            padding: 10px; /* Aumentar el padding en dispositivos más grandes */
-        }
-    
-        .footer ul {
-            flex-direction: row; /* Mantener la dirección en fila para pantallas más grandes */
-        }
+    .company-info {
+        width: 95%;
     }
+
+    .info-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    .footer {
+        position: relative;
+        padding: 10px 0;
+        grid-template-columns: 1fr;
+        grid-template-areas: "footer__menu";
+    }
+
+    .footer ul {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 60px;
+        padding: 0;
+        max-width: 95%;
+    }
+
+    .footer ul li img {
+        width: 25px;
+        height: auto;
+        margin-bottom: 5px;
     }
 }
-
-
