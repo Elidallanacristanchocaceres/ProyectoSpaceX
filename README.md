@@ -47,5 +47,11 @@ Desarrollar una interfaz interactiva para mostrar información sobre los cohetes
 - **Interacción Dinámica**: Proporciona una experiencia fluida al interactuar con los datos en tiempo real.
 - **Organización del Código**: Estructurado en módulos para facilitar el mantenimiento.
 - **Responsividad**: Adaptable a diferentes dispositivos y tamaños de pantalla.
+_____
+### 📬 Contacto
+- 📧 Correo electrónico: cristanchodayana062017@gmail.com
 
+- 💼 LinkedIn: [Elidallana Cristancho Caceres](https://www.linkedin.com/in/elidallanacristancho/)
+
+¡Gracias por ser parte de esta aventura! 🚀✨
 
